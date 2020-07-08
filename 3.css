@@ -1,0 +1,24 @@
+#button {
+	border-color: grey;
+	border-radius: 5px;
+	border-width: 2px;
+	background-color: rgb(255, 194, 152) ;
+	height:  50px;
+	width: 150px;
+	margin: 15px;
+	box-shadow: 5 5 11px red;
+	
+}
+#big {
+	background-color: green;
+	position: relative;
+	height: 200px;
+	width: 200px;
+}
+#smo {
+	background-color: red;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+
+}
