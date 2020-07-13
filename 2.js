@@ -1,11 +1,17 @@
 function on1 (){
-  move();
+  move3();
 }
 function off1 (){
   move2();
 }
 var x =0;
 var y = 0;
+function move3() {
+  var smole = document.getElementById('smo');
+  smole.style.top = 0 + "px";
+  smole.style.left = 0 + "px";
+
+}
 
 
 function move2 () {
@@ -16,22 +22,24 @@ function move2 () {
       setInterval (function q (){
       
 
-      if(!x  && y< length){//право
-        smole.style.top = ++y + "px";
+      if(!y  && x< length){//право
+        smole.style.left = ++x + "px";
+        smole.style.background = "red";
         
-      }else if(y == length && x < length && y){//низ
-         smole.style.left = ++x + "px";         
-        
-      } else if((y == length && x==length)||(x== length && y<length&&y)) {//лево
-        smole.style.top = --y + "px";
-        
-      } else if(y=0 && x<length && x){//вверх
-         smole.style.left = --x + "px";
-         
+      }else if(x == length && y < length && x){//низ
+         smole.style.top = ++y + "px";         
+        smole.style.background = "blue";
+
+      } else if((y == length && x==length)||(y== length && x<length&&x)) {//лево
+        smole.style.left = --x + "px";
+        smole.style.background = "yellow";
+      } else if(!x && y<=length && y){//вверх
+         smole.style.top = --y + "px";
+         smole.style.background = "blue";
        }
          console.log(x);
        console.log(y);      
                
-  }, 10);
+  }, 50);
 
 }
